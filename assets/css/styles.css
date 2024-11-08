@@ -607,3 +607,70 @@ footer {
     background-color: #333;
     color: #fff;
 }
+
+/* ------------------------------------------------------------------------------ RESPONSIVE STYLES */
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .cta h2,
+    .cta p {
+        font-size: 20px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .service-categories {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-members {
+        flex-direction: column;
+    }
+
+    .team-member {
+        margin-bottom: 20px;
+    }
+
+    .about-overview h1 {
+        font-size: 28px;
+    }
+
+    .mission-values .values {
+        flex-direction: column;
+    }
+
+    .company-history ul {
+        padding: 0 20px;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: row;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+
+    .service-categories {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .company-history ul {
+        font-size: 18px;
+    }
+}
