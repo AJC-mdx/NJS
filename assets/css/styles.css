@@ -12,24 +12,65 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Navbar styling */
-nav ul {
-    list-style-type: none;
-    padding: 0;
+/* ------------------------------------------------------------------------------ SIDE MENU */
+/* Styles for the hamburger icon */
+.hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
     display: flex;
-    justify-content: space-around;
-    background-color: #333;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
 }
 
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
+.hamburger span {
     display: block;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Styles for the side menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+.side-menu a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #575757;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Show side menu when active */
+.side-menu.open {
+    width: 250px;
 }
 
 /* Header */
@@ -38,11 +79,531 @@ header {
     padding: 50px 0;
 }
 
+/* ------------------------------------------------------------------------------ HOME PAGE */
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.hero-image {
+    flex: 1;
+    height: 300px;
+    background-color: #ddd; /* Placeholder background color */
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.hero-text {
+    flex: 2;
+    color: #333;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Services Summary Section */
+.services-summary {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.service-text {
+    flex: 2;
+    color: #333;
+    padding-right: 20px;
+}
+
+.service-text h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.service-image {
+    flex: 1;
+    height: 250px;
+    background-color: #ddd; /* Placeholder background color */
+    border-radius: 8px;
+}
+
+/* Closing Section */
+.closing {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------------------ ABOUT PAGE */
+/* About Overview Section */
+.about-overview {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.about-overview h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.about-overview p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/* Mission and Values Section */
+.mission-values {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.mission-values h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mission-values .values {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.value {
+    max-width: 250px;
+    text-align: center;
+}
+
+.value h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.why-choose-us h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.why-choose-us ul {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+    list-style-type: none;
+}
+
+.why-choose-us li {
+    padding: 8px 0;
+}
+
+/* Our Team Section */
+.our-team {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.our-team h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    max-width: 200px;
+    text-align: center;
+}
+
+.team-photo {
+    height: 150px;
+    width: 150px;
+    background-color: #ddd; /* Placeholder for team photo */
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+/* Company History / Milestones Section */
+.company-history {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.company-history h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.company-history ul {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+    list-style: none;
+}
+
+.company-history li {
+    padding: 10px 0;
+}
+
+/* ------------------------------------------------------------------------------ SERVICES PAGE */
+/* Services Overview Section */
+.services-overview {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.services-overview h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.services-overview p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Service Categories Section */
+.service-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.service-category {
+    text-align: center;
+}
+
+.service-image {
+    height: 200px;
+    background-color: #ddd; /* Placeholder for service image */
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.service-category h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-category p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Service Highlights Section */
+.service-highlights {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.service-highlights h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-highlights ul {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+    list-style-type: none;
+}
+
+.service-highlights li {
+    padding: 8px 0;
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------------------ CONTACT FORM */
+/* Contact Intro Section */
+.contact-intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.contact-intro h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-intro p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Information Section */
+.contact-info {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 18px;
+    color: #555;
+}
+
+.contact-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 18px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit-btn {
+    padding: 14px 28px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Google Maps Placeholder Section */
+.google-map {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd; /* Placeholder for map */
+    margin-top: 20px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.faq-section h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 18px;
+    color: #555;
+}
+
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
+    padding: 20px;
     background-color: #333;
     color: #fff;
 }

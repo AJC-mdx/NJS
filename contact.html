@@ -3,39 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Vehicle Logistics</title>
+    <meta name="description" content="Get in touch with us for all your vehicle logistics inquiries. Use our contact form or reach us by phone or email.">
+    <title>Contact Us - Vehicle Logistics Company</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    <!-- Contact Form -->
-    <section>
-        <h2>Contact Us</h2>
-        <p>Fill in the form below to request a consultation for our vehicle logistics services.</p>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <!-- Contact Introduction Section -->
+    <section class="contact-intro">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or would like to receive a quote for our vehicle logistics services, feel free to get in touch using the contact form below. Alternatively, you can reach us directly via phone or email. We're here to help!</p>
+    </section>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <div class="contact-details">
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:info@logisticscompany.com">info@logisticscompany.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>123 Logistics St., Suite 100, City, State, ZIP</p>
+            </div>
+        </div>
+    </section>
 
-            <button type="submit">Submit</button>
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <p>Fill out the form below to get in touch with our team for quotes, inquiries, or general questions. We'll get back to you as soon as possible.</p>
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number (optional)">
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
         </form>
     </section>
 
+    <!-- Google Maps Placeholder Section -->
+    <section class="google-map">
+        <h2>Our Location</h2>
+        <div class="map-placeholder">
+            <p>Insert Google Map here (Placeholder for now).</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Optional) -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How do I request a quote?</h3>
+            <p>Simply fill out the contact form or reach out to us via phone or email, and we'll get back to you with a tailored quote for your vehicle logistics needs.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What type of vehicles do you transport?</h3>
+            <p>We handle all types of vehicles, including cars, trucks, motorcycles, and specialty vehicles such as classic and luxury cars.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I track my vehicle during transport?</h3>
+            <p>We provide real-time tracking for all vehicle transport services. You can check the status of your vehicle at any time through our tracking system.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2023 Vehicle Logistics Company. All rights reserved.</p>
     </footer>

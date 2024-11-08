@@ -9,23 +9,51 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    <!-- Main Content -->
-    <header>
-        <h1>Welcome to Our Vehicle Logistics Company</h1>
-        <p>Providing safe and efficient transportation solutions for all your vehicle logistics needs.</p>
-    </header>
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-    <!-- Additional sections can go here -->
+    <!-- Hero Section with Placeholder Image and Intro -->
+    <section class="hero">
+        <div class="hero-image"></div> <!-- Placeholder div for hero image -->
+        <div class="hero-text">
+            <h1>Welcome to Our Vehicle Logistics Company</h1>
+            <p>Your trusted partner in safe and efficient vehicle transportation, providing end-to-end logistics solutions for individuals and businesses alike.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Need a Quote?</h2>
+        <p>Contact us to get a customized quote and learn how we can help you transport your vehicle safely and efficiently.</p>
+        <a href="contact.html" class="cta-button">Get a Quote</a>
+    </section>
+
+    <!-- Services Summary Section with Placeholder Image -->
+    <section class="services-summary">
+        <div class="service-text">
+            <h2>Our Services</h2>
+            <p>We specialize in providing reliable, timely, and secure vehicle transportation across regions. Our fleet and team are equipped to handle all logistics professionally.</p>
+        </div>
+        <div class="service-image"></div> <!-- Placeholder div for service image -->
+    </section>
+
+    <!-- Closing Section -->
+    <section class="closing">
+        <p>At Vehicle Logistics Company, we pride ourselves on delivering exceptional customer service and reliable logistics solutions. Let us take the stress out of transporting your vehicle.</p>
+    </section>
 
     <footer>
         <p>&copy; 2023 Vehicle Logistics Company. All rights reserved.</p>
