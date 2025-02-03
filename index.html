@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,78 +8,115 @@
     <title>Vehicle Logistics Company</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
+    <header>
+        <div class="logo">LOGO HERE</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Hamburger Menu -->
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <!-- Side Menu -->
-    <div id="sideMenu" class="side-menu">
-        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
-    <!-- Hero Section with Placeholder Image and Intro -->
-    <section class="hero">
-        <div class="hero-image"></div> <!-- Placeholder div for hero image -->
-        <div class="hero-text">
-            <h1>Your Car, Delivered with Precision—Reliability You Can Count On Every Mile.</h1>
-            <p>15+ Years of Excellence. Your car deserves expert hands and unmatched care—delivered safely, efficiently, and right on time.</p>
-            <a href="contact.html" class="cta-button">Free Quote. No Hassle. Just Precision.</a>
+    <section id="home" class="hero">
+        <img src="assets/images/hero-bg.jpg" alt="Hero Image" class="hero-img">
+        <h1>NJS will deliver your vehicle reliably and promptly, without compromise. A Service You Can Count On.</h1>
+        <p>Vehicles collected and delivered where you need, when you need.</p>
+        <a href="#contact" class="cta-button">Request a Quote Now</a>
+        <div class="why-choose-us">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li><strong>Care That’s Personal:</strong> Your vehicle is our priority and we ensure unparalleled
+                    safety.</li>
+                <li><strong>On-Time, Every Time:</strong> Schedules tailored to fit your life.</li>
+                <li><strong>Total Transparency:</strong> Your vehicle professionally appraised on collection and on
+                    delivery.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <h2>Why Choose Us?</h2>
+    <section id="about">
+        <h2>Driven by Passion. Proven by Experience.</h2>
+        <h3>Our Story</h3>
+        <p>At NJS Automotive, we know a vehicle is more than just a way to get from point A to point B—it’s a symbol of
+            hard work, cherished memories, and future possibilities. That’s why we treat every car like it’s our own.
+        </p>
+        <p>What sets us apart isn’t just our 10+ years of industry experience but the heart we bring to every job.
+            We turned a love for vehicles into a business built on trust, precision, and care.
+            While NJS is new, the experience behind it isn’t.
+            Our founder spent over 10 years working with one of the biggest names in the automotive industry, managing
+            operations and ensuring vehicles met the highest standards.
+            Now, we’re bringing that same dedication, precision, and professionalism to vehicle logistics—giving you a
+            service you can trust.</p>
+        <h3>Our Mission</h3>
+        <p>To move what matters most to you—safely, on time, and with total transparency.</p>
+        <p>Your vehicle is your pride and joy, and we treat it that way.
+            Our mission is simple: make the logistics process seamless and stress-free.
+            By combining a deep passion for cars with decades of expertise, we ensure every transport is handled with
+            care, precision, and the professionalism you deserve.</p>
+        <h3>Why We’re Different</h3>
         <ul>
-            <li>Care That’s Personal: We treat your vehicle as if it’s our own, ensuring unparalleled safety.</li>
-            <li>On-Time, Every Time: Schedules tailored to fit your life.</li>
-            <li>Total Transparency: Real-time tracking and instant delivery updates—so you’re never in the dark.</li>
+            <li><strong>Expert Hands, Every Step of the Way:</strong> With over 15 years of automotive experience, we
+                bring unmatched precision and respect to every vehicle we move.</li>
+            <li><strong>Real-Time Communication:</strong> From pick-up to drop-off, you’re never left guessing. We are
+                always on hand to provide regular updates, so you always know where your vehicle is.</li>
+            <li><strong>Customer-Centric Approach:</strong> Your needs aren’t just a priority—they’re our focus. From
+                the first call to the final delivery, we aim to exceed expectations every time.</li>
         </ul>
     </section>
 
-    <!-- Expertise Section -->
-    <section class="expertise">
-        <h2>Experience That Drives Results</h2>
-        <p>With over 15 years of experience in the automotive world, we bring a deep understanding of what vehicles mean to their owners. Whether it’s a single car or a fleet, we approach every job with care, attention to detail, and a commitment to earning your trust.</p>
+    <section id="services">
+        <h2>Vehicle Transport Done Right—Reliable, Safe, Tailored to You.</h2>
+        <h3>Door-to-Door Transport</h3>
+        <p>From Your Driveway to Your Destination—Stress-Free.</p>
+        <p>From pick-up to drop-off, we manage every detail, so you don’t have to lift a finger.
+            Our door-to-door transport service gives you complete peace of mind.
+            We pick it up and deliver it where you need, when you need, whether it’s across town or across the country,
+            your vehicle’s journey is our responsibility.</p>
+        <h3>Specialized Handling</h3>
+        <p>Exceptional Vehicles Deserve Exceptional Care.</p>
+        <p>From the moment we collect your vehicle to the final handover, every detail is handled with precision. When
+            your car arrives, we don’t just deliver it—we make sure your customers are fully acquainted with its
+            controls and features, ensuring a seamless transition. Whether it’s a luxury model or an electric vehicle,
+            we know it’s more than just transportation—it’s an investment.
+            That’s why we take every precaution to guarantee flawless handling and safe delivery. Trust us to treat your
+            pride and joy like our own.</p>
     </section>
 
-    <!-- Services Overview Section -->
-    <section class="services-overview">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Door-to-Door Precision: We pick it up and deliver it where you need, when you need—no stress.</li>
-            <li>Fleet Services That Work as Hard as You Do: Tailored solutions for businesses that demand the best.</li>
-            <li>Luxury-Level Handling: From EVs to high-end classics, we treat every car with white-glove care.</li>
-        </ul>
-    </section>
-
-    <!-- Testimonial Placeholder Section -->
-    <section class="testimonial">
-        <blockquote>
-            Starting fresh? We know the feeling. Our mission is to make your vehicle’s journey as seamless and stress-free as possible—because everyone deserves logistics they can rely on.
-        </blockquote>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <h2>Your Vehicle, Our Expertise</h2>
-        <p>Request your free, no-obligation quote now and see the difference professionals make.</p>
-        <a href="contact.html" class="cta-button">Request a Quote</a>
+    <section id="contact">
+        <h2>Let’s Get Your Vehicle Where It Needs to Go—Hassle-Free, Every Time.</h2>
+        <p>Got questions? Need a quote? We’re here to make your vehicle logistics as smooth as possible.
+            From your first inquiry to final delivery, our team takes care of every detail so you can focus on what
+            matters most.
+            Simply fill out the form below, and we’ll review your request and get back to you quickly with a
+            personalized solution.
+            Stress-free vehicle transport starts here.</p>
+        <form>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="business" placeholder="Business Name">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <select name="vehicle-type">
+                <option value="car">Car</option>
+                <option value="truck">Truck</option>
+                <option value="motorcycle">Motorcycle</option>
+            </select>
+            <input type="text" name="vehicle-value" placeholder="Vehicle Value">
+            <input type="text" name="pickup" placeholder="Pick-Up Location" required>
+            <input type="text" name="delivery" placeholder="Delivery Location" required>
+            <textarea name="details" placeholder="Additional Details/Requests"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Contact us at info@[businessname].com | 020-XXXX-XXXX | Mon-Fri, 9 AM-6 PM</p>
     </section>
 
     <footer>
         <p>&copy; 2025 NJS Automotive. All rights reserved.</p>
     </footer>
-
-    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
