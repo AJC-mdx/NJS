@@ -1,183 +1,658 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset and General Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     color: #333;
 }
 
-/* Navigation Bar */
+
+/* General header styling */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 95%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 20px 40px;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
+/* Logo styling */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Navigation styling */
 nav ul {
-    list-style: none;
+    display: flex;
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
+/* List items in the nav */
 nav ul li {
     margin: 0 15px;
 }
 
+/* Links in the navigation */
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
+/* Hover effects for links */
 nav ul li a:hover {
-    color: #ffc107;
+    color: #00bcd4;
 }
 
-/* Hero Section */
+/* Adding an underline animation effect on hover */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00bcd4;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 25px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        padding-left: 5%;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    header:hover nav ul {
+        display: flex;
+    }
+}
+
+
+/* Hero section */
 .hero {
     position: relative;
-    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white;
+    transition: all 0.5s ease-in-out;
 }
 
+/* Style for the hero image */
 .hero-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the full section without distortion */
-    z-index: -1; /* Keeps the image behind text content */
+    object-fit: cover; /* Ensures the image covers the entire section without stretching */
+    z-index: -1; /* Places the image behind the content */
 }
 
-
+/* Hero heading */
 .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
 }
 
+/* Hero paragraph */
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s ease-out;
 }
 
+/* Call-to-action button */
 .cta-button {
-    background: #ffc107;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    cursor: pointer;
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
     text-decoration: none;
-    transition: background 0.3s;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-.hero button:hover {
-    background: #e0a800;
+.cta-button:hover {
+    background-color: #0097a7;
 }
 
-/* Sections */
-section {
-    padding: 80px 50px;
-    max-width: 1200px;
-    margin: auto;
+/* "Why Choose Us" section */
+.why-choose-us {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
 }
 
-section h2 {
-    text-align: center;
+.why-choose-us h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
-    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
 }
 
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: auto;
+.why-choose-us ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 1.1rem;
 }
 
-form input, form select, form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
+.why-choose-us li {
+    margin-bottom: 15px;
 }
 
-form button {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 1.2em;
-    cursor: pointer;
+/* Hover effect for Why Choose Us section */
+.why-choose-us:hover {
+    transform: scale(1.05);
 }
 
-form button:hover {
-    background: #218838;
-}
-
-/* Footer */
-footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-/* Responsive Design */
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        margin-left: -10%;
+/* Animations for fadeIn */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-
-    nav ul {
-        flex-direction: row;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .hero-img {
-        width: 100%;
-        height: 100%;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    header {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .why-choose-us {
+        padding: 30px;
+    }
+
+    .why-choose-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .why-choose-us li {
+        font-size: 1rem;
+    }
+}
+
+
+/* About Section */
+#about {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Section heading (main title) */
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #00bcd4;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Subheadings */
+#about h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Paragraphs */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #666;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+/* Styling for the list in "Why We're Different" */
+#about ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+    text-align: left;
+    display: inline-block;
+}
+
+#about ul li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+    color: #333;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+#about ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00bcd4;
+    font-size: 1.4rem;
+}
+
+/* Animations for fadeIn */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #about {
+        padding: 60px 20px;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about h3 {
+        font-size: 1.5rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    #about ul li {
+        font-size: 1rem;
+    }
+}
+
+
+/* Services Section */
+#services {
+    padding: 80px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+/* Section heading (main title) */
+#services h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #00bcd4;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Subheadings */
+#services h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Paragraphs */
+#services p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #666;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+/* Special styling for each service */
+#services h3 + p {
+    border-top: 2px solid #00bcd4;
+    padding-top: 20px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* Hover effect for section */
+#services:hover {
+    background-color: #f0f9f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations for fadeIn */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #services {
+        padding: 60px 20px;
+    }
+
+    #services h2 {
+        font-size: 2rem;
+    }
+
+    #services h3 {
+        font-size: 1.5rem;
+    }
+
+    #services p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Section heading (main title) */
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #00bcd4;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Paragraphs */
+#contact p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #666;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Form Styling */
+form {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Form input fields */
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state for form fields */
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #00bcd4;
+    outline: none;
+}
+
+/* Textarea styling */
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Submit button */
+form button {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+form button:hover {
+    background-color: #0097a7;
+}
+
+/* Contact info at the bottom */
+#contact p:last-of-type {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+
+/* Animations for fadeIn */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #contact {
+        padding: 60px 20px;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact p {
+        font-size: 1rem;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 1rem;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Titles */
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00bcd4;
+}
+
+/* Footer Links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Social Media Links */
+.footer-section .social-media ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-section .social-media ul li a i {
+    font-size: 1.3rem;
+}
+
+/* Legal Info */
+.footer-section .legal {
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    nav ul {
-        flex-direction: row;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
+    .footer-section {
+        margin-bottom: 20px;
     }
 }
