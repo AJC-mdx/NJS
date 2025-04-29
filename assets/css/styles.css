@@ -28,14 +28,14 @@ header {
 }
 
 /* Logo styling */
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: color 0.3s ease;
+.logo img {
+    height: 100%;
+    max-height: 60px;
+    width: auto;
+    display: block;
+    object-fit: cover;
 }
+
 
 /* Navigation styling */
 nav ul {
@@ -91,7 +91,7 @@ nav ul li a:hover::before {
     }
 
     .logo {
-        font-size: 1.5rem;
+        padding-left: 25%;
     }
 
     nav ul {
@@ -121,6 +121,7 @@ nav ul li a:hover::before {
 
 /* Hero section */
 .hero {
+    background-image: url('../images/hero-bg.jpg');
     position: relative;
     text-align: center;
     color: #fff;
@@ -209,11 +210,6 @@ nav ul li a:hover::before {
 
 .why-choose-us li {
     margin-bottom: 15px;
-}
-
-/* Hover effect for Why Choose Us section */
-.why-choose-us:hover {
-    transform: scale(1.05);
 }
 
 /* Animations for fadeIn */
