@@ -30,7 +30,7 @@ header {
 /* Logo styling */
 .logo img {
     height: 100%;
-    max-height: 60px;
+    max-height: 80px;
     width: auto;
     display: block;
     object-fit: cover;
